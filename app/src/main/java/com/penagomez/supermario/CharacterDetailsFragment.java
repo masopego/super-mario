@@ -25,19 +25,11 @@ public class CharacterDetailsFragment extends Fragment {
         String abilities = String.valueOf(R.string.jumping);
         int imageResourceId = R.drawable.mario;
 
-
-
-
         binding.characterImage.setImageResource(imageResourceId);
         binding.characterName.setText(name);
         binding.characterDescription.setText(description);
         binding.characterAbilities.setText(abilities);
 
-
         return binding.getRoot();
-
-
     }
-
-
 }
