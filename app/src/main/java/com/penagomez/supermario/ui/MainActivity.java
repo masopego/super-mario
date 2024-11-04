@@ -5,32 +5,38 @@ import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
+import com.penagomez.supermario.R;
 import com.penagomez.supermario.data.dto.Character;
-import com.penagomez.supermario.data.repository.CharacterRepository;
-import com.penagomez.supermario.data.repository.InMemoryCharacterRepository;
 import com.penagomez.supermario.databinding.ActivityMainBinding;
-import com.penagomez.supermario.ui.characterlist.adapter.SuperMarioRecyclerViewAdapter;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
-    private CharacterRepository repository;
+    private NavController navController;
 
     public MainActivity() {
-        repository = new InMemoryCharacterRepository();
+
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.superMarioRecyclerview.setLayoutManager(new LinearLayoutManager(this));
-        binding.superMarioRecyclerview.setAdapter(new SuperMarioRecyclerViewAdapter(repository.findAll(), this));
+        //binding.superMarioRecyclerview.setLayoutManager(new LinearLayoutManager(this));
+        // binding.superMarioRecyclerview.setAdapter(new SuperMarioRecyclerViewAdapter(repository.findAll(), this));
 
+        // Configura el NavController
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
+        NavigationUI.setupActionBarWithNavController(this, navController);
 
     }
 
@@ -42,6 +48,15 @@ public class MainActivity extends AppCompatActivity {
         bundle.putString("description", character.getDescription());
         bundle.putString("abilities", character.getAbilities());
 
+        // Navegar al CharacterDetailFragment con el Bundle
+        Navigation.findNavController(view).navigate(R.id.characterDetailsFragment, bundle);
+
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        // Utiliza el método navigateUp del NavController
+        return navController.navigateUp() || super.onSupportNavigateUp();
     }
 
 

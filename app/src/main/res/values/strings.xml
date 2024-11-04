@@ -3,5 +3,7 @@
     <string name="character_list">Lista de personajes</string>
     <string name="character_detail">Detalles del personaje</string>
     <string name="super_mario_bros_app">Super Mario Bros App</string>
-    <string name="ability">Habilidad</string>
+    <string name="ability">Habilidades</string>
+    <string name="list_welcome_message">Bienvenidos al mundo de Mario</string>
+    <string name="detail_welcome_message">Se ha seleccionado el personaje</string>
 </resources>

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -40,6 +41,9 @@ public class CharacterDetailsFragment extends Fragment {
             binding.characterDescription.setText(description);
             binding.characterAbilities.setText(abilities);
 
+            // Muestra el Toast con el nombre del personaje
+            String message = getString(R.string.detail_welcome_message) + " " + name;
+            Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
         }
     }
 

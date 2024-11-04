@@ -3,45 +3,51 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:paddingHorizontal="20dp">
 
     <ImageView
         android:id="@+id/character_image"
         android:layout_width="250dp"
-        android:layout_height="200dp"
-        />
+        android:layout_height="200dp" />
+
     <TextView
         android:id="@+id/character_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:textColor="@color/mario_blue"
         android:textSize="28sp"
         android:textStyle="bold"
         android:layout_marginTop="40dp"
-        android:fontFamily="sans-serif-black" />
+        android:fontFamily="sans-serif-black"
+        android:text="@string/ability" />
 
     <TextView
         android:id="@+id/character_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/mario_blue"
         android:textSize="18sp"
         android:textStyle="normal"
         android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif-black" />
+        android:fontFamily="sans-serif-black"
+        android:textAlignment="center"
+        android:text="@string/ability" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ability"
+        android:textSize="25sp"
+        android:textColor="@color/mario_yellow"
         android:layout_marginTop="40dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/character_abilities"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/mario_yellow"
-        android:textSize="25sp"
-        android:fontFamily="sans-serif-black" />
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/ability" />
 
 </LinearLayout>
