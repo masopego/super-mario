@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InMemoryCharacterRepository implements CharacterRepository {
-
     private final List<Character> characters = new ArrayList<Character>();
+
 
     public InMemoryCharacterRepository() {
 
