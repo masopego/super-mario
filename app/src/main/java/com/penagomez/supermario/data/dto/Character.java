@@ -1,14 +1,16 @@
-package com.penagomez.supermario;
+package com.penagomez.supermario.data.dto;
 
-public class SuperMarioData {
+public class Character {
     private final int image;
     private final String name;
     private final String description;
+    private final String abilities;
 
-    public SuperMarioData(int image, String name, String description) {
+    public Character(int image, String name, String description, String abilities) {
         this.image = image;
         this.name = name;
         this.description = description;
+        this.abilities = abilities;
     }
 
     public int getImage() {
@@ -21,6 +23,10 @@ public class SuperMarioData {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getAbilities() {
+        return abilities;
     }
 
 }

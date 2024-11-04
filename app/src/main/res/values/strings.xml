@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">SuperMario</string>
+    <string name="character_list">Lista de personajes</string>
+    <string name="character_detail">Detalles del personaje</string>
+
     <string name="super_mario_bros_app">Super Mario Bros App</string>
-    <string name="mario">Mario</string>
-    <string name="kingdom_hero">Héroe del Reino Champiñón</string>
-    <string name="jumping">Salta alto</string>
     <string name="ability">Habilidad</string>
 </resources>
