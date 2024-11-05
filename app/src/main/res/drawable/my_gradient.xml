@@ -4,6 +4,7 @@
         android:type="linear"
         android:angle="0"
         android:startColor="@color/mario_yellow"
+        android:centerColor="@color/mario_red"
         android:endColor="@color/mario_blue"
     />
 </shape>

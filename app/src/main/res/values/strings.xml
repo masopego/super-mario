@@ -2,8 +2,14 @@
     <string name="app_name">SuperMario</string>
     <string name="character_list">Lista de personajes</string>
     <string name="character_detail">Detalles del personaje</string>
-    <string name="super_mario_bros_app">Super Mario Bros App</string>
+
     <string name="ability">Habilidades</string>
     <string name="list_welcome_message">Bienvenidos al mundo de Mario</string>
     <string name="detail_welcome_message">Se ha seleccionado el personaje</string>
+
+
+    <string name="about_us">Acerca de...</string>
+    <string name="about_us_title">Acerca de</string>
+    <string name="about_us_message">Aplicación desarrollada por María Soledad Peña Gómez. Versión 1.0.</string>
+    <string name="about_us_button">OK</string>
 </resources>
