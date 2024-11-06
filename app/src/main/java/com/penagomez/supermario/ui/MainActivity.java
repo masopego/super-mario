@@ -8,14 +8,18 @@ import android.view.MenuItem;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.navigation.NavigationView;
 import com.penagomez.supermario.R;
 import com.penagomez.supermario.data.dto.Character;
 import com.penagomez.supermario.databinding.ActivityMainBinding;
@@ -23,10 +27,7 @@ import com.penagomez.supermario.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private NavController navController;
-
-    public MainActivity() {
-
-    }
+    private DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +41,18 @@ public class MainActivity extends AppCompatActivity {
 
         // Configura el NavController
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
+
         NavigationUI.setupActionBarWithNavController(this, navController);
 
+
+        // Configura el DrawerLayout y NavigationView
+        drawerLayout = binding.drawerLayout;
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        NavigationUI.setupWithNavController(navigationView, navController);
+        navigationView.setNavigationItemSelectedListener(this::onNavigationItemSelected);
+
     }
+
 
     public void characterClicked(Character character, View view) {
         Bundle bundle = new Bundle();
@@ -72,14 +81,27 @@ public class MainActivity extends AppCompatActivity {
             showAboutDialog();
             return true;
         }
+        if (item.getItemId() == R.id.action_menu) {
+
+            if (drawerLayout.isDrawerOpen(GravityCompat.END)) {
+                drawerLayout.closeDrawer(GravityCompat.END);
+            } else {
+                drawerLayout.openDrawer(GravityCompat.END);
+            }
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
 
     @Override
     public boolean onSupportNavigateUp() {
-        // Utiliza el método navigateUp del NavController
-        return navController.navigateUp() || super.onSupportNavigateUp();
+        Fragment navHostFragment = getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+
+        if (navHostFragment != null) {
+            return NavigationUI.navigateUp(navController, binding.drawerLayout);
+        }
+        return super.onSupportNavigateUp();
     }
 
     private void showAboutDialog() {
@@ -95,4 +117,19 @@ public class MainActivity extends AppCompatActivity {
                 });
         builder.create().show();
     }
+
+
+    private boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+        if (itemId == R.id.nav_home) {
+            navController.navigate(R.id.characterListFragment);
+        } else if (itemId == R.id.nav_settings) {
+            navController.navigate(R.id.preferencesFragment);
+        } else {
+            throw new IllegalStateException("Unexpected value: " + itemId);
+        }
+        drawerLayout.closeDrawer(GravityCompat.END);
+        return true;
+    }
+
 }

@@ -6,4 +6,10 @@
         android:title="@string/about_us"
         android:icon="@drawable/about_us"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_menu"
+        android:title="@string/about_us"
+        android:icon="@drawable/hamburguer_menu"
+        app:showAsAction="ifRoom" />
+
 </menu>

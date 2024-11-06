@@ -12,4 +12,62 @@
     <string name="about_us_title">Acerca de</string>
     <string name="about_us_message">Aplicación desarrollada por María Soledad Peña Gómez. Versión 1.0.</string>
     <string name="about_us_button">OK</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_settings">Ajustes</string>
+    <string name="nav_language">Idioma</string>
+
+    <string name="language_preference_title">Cambiar idioma a Inglés</string>
+    <string name="language_preference_summary_on">Español</string>
+    <string name="language_preference_summary_off">Inglés</string>
+
+
+    <string name="mario_name">Super Mario</string>
+    <string name="luigi_name">Luigi</string>
+    <string name="peach_name">Princess Peach</string>
+    <string name="bowser_name">Bowser</string>
+    <string name="yoshi_name">Yoshi</string>
+    <string name="toad_name">Toad</string>
+    <string name="donkey_kong_name">Donkey Kong</string>
+    <string name="wario_name">Wario</string>
+    <string name="waluigi_name">Waluigi</string>
+    <string name="daisy_name">Princess Daisy</string>
+    <string name="koopa_troopa_name">Koopa Troopa</string>
+    <string name="goomba_name">Goomba</string>
+    <string name="bowser_jr_name">Bowser Jr.</string>
+    <string name="rosalina_name">Rosalina</string>
+    <string name="lakitu_name">Lakitu</string>
+
+    <string name="mario_description">El héroe principal, famoso por su valentía, habilidades de salto y rescatar a la Princesa Peach.</string>
+    <string name="luigi_description">Hermano de Mario, ligeramente más alto y conocido por su carácter tímido pero valiente.</string>
+    <string name="peach_description">La princesa del Reino Champiñón, secuestrada frecuentemente por Bowser, pero siempre rescatada por Mario.</string>
+    <string name="bowser_description">El rey de los Koopas, villano principal que intenta apoderarse del Reino Champiñón y secuestra a Peach.</string>
+    <string name="yoshi_description">Un fiel dinosaurio que ayuda a Mario y Luigi en sus aventuras, conocido por su habilidad para tragarse enemigos.</string>
+    <string name="toad_description">Habitante y guardián del Reino Champiñón que asiste a Mario y Peach.</string>
+    <string name="donkey_kong_description">Un gorila grande y fuerte que fue inicialmente un rival de Mario, pero ahora es un aliado ocasional.</string>
+    <string name="wario_description">El rival de Mario, egoísta y ambicioso, siempre buscando maneras de enriquecerse.</string>
+    <string name="waluigi_description">El hermano de Wario, conocido por su envidia hacia Luigi y sus travesuras.</string>
+    <string name="daisy_description">La princesa del Reino Sarasaland y amiga de Peach, valiente y extrovertida.</string>
+    <string name="koopa_troopa_description">Un enemigo común en el Reino Champiñón, que tiene un caparazón que puede usarse como arma cuando es golpeado.</string>
+    <string name="goomba_description">Un enemigo clásico de Mario, pequeño pero persistente en bloquear su camino.</string>
+    <string name="bowser_jr_description">Hijo de Bowser, con un fuerte deseo de impresionar a su padre y seguir sus pasos.</string>
+    <string name="rosalina_description">Guardiana del cosmos y amiga de Mario, acompaña a los Lumas en sus aventuras espaciales.</string>
+    <string name="lakitu_description">Un Koopa que vuela en una nube y arroja espinas a Mario, a veces ayuda como camarógrafo en Mario Kart.</string>
+
+    <string name="mario_skills">Salto alto, super fuerza</string>
+    <string name="luigi_skills">Salto alto, deslizamiento</string>
+    <string name="peach_skills">Flotación en el aire, magia</string>
+    <string name="bowser_skills">Aliento de fuego, gran fuerza</string>
+    <string name="yoshi_skills">Lengua larga, salto extendido</string>
+    <string name="toad_skills">Velocidad, conocimiento del Reino Champiñón</string>
+    <string name="donkey_kong_skills">Fuerza bruta, lanzamiento de barriles</string>
+    <string name="wario_skills">Super fuerza, resistencia</string>
+    <string name="waluigi_skills">Habilidades de trampas, agilidad</string>
+    <string name="daisy_skills">Super salto, habilidades deportivas</string>
+    <string name="koopa_troopa_skills">Defensa con caparazón, ataque giratorio</string>
+    <string name="goomba_skills">Ataque en grupo, tenacidad</string>
+    <string name="bowser_jr_skills">Pintura mágica, habilidades en batalla</string>
+    <string name="rosalina_skills">Poderes cósmicos, levitación</string>
+    <string name="lakitu_skills">Volar en nubes, lanzar espinas</string>
+
 </resources>

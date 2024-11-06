@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">SuperMario</string>
+    <string name="character_list">Character List</string>
+    <string name="character_detail">Character Details</string>
+
+    <string name="ability">Abilities</string>
+    <string name="list_welcome_message">Welcome to the world of Mario</string>
+    <string name="detail_welcome_message">The character has been selected</string>
+
+    <string name="about_us">About us...</string>
+    <string name="about_us_title">About</string>
+    <string name="about_us_message">Application developed by María Soledad Peña Gómez. Version 1.0.</string>
+    <string name="about_us_button">OK</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_language">Language</string>
+
+    <string name="language_preference_title">Switch language to Spanish</string>
+    <string name="language_preference_summary_on">English</string>
+    <string name="language_preference_summary_off">Spanish</string>+
+
+
+    <string name="mario_name">Super Mario</string>
+    <string name="luigi_name">Luigi</string>
+    <string name="peach_name">Princess Peach</string>
+    <string name="bowser_name">Bowser</string>
+    <string name="yoshi_name">Yoshi</string>
+    <string name="toad_name">Toad</string>
+    <string name="donkey_kong_name">Donkey Kong</string>
+    <string name="wario_name">Wario</string>
+    <string name="waluigi_name">Waluigi</string>
+    <string name="daisy_name">Princess Daisy</string>
+    <string name="koopa_troopa_name">Koopa Troopa</string>
+    <string name="goomba_name">Goomba</string>
+    <string name="bowser_jr_name">Bowser Jr.</string>
+    <string name="rosalina_name">Rosalina</string>
+    <string name="lakitu_name">Lakitu</string>
+
+    <string name="mario_description">The main hero, famous for his bravery, jumping skills, and rescuing Princess Peach.</string>
+    <string name="luigi_description">Marios brother, slightly taller and known for his shy yet brave character.</string>
+    <string name="peach_description">The princess of the Mushroom Kingdom, frequently kidnapped by Bowser but always rescued by Mario.</string>
+    <string name="bowser_description">The King of the Koopas, the main villain who tries to take over the Mushroom Kingdom and kidnaps Peach.</string>
+    <string name="yoshi_description">A loyal dinosaur who helps Mario and Luigi on their adventures, known for his ability to swallow enemies.</string>
+    <string name="toad_description">A resident and guardian of the Mushroom Kingdom who assists Mario and Peach.</string>
+    <string name="donkey_kong_description">A large and strong gorilla who was initially Marios rival but is now an occasional ally.</string>
+    <string name="wario_description">Marios rival, selfish and ambitious, always looking for ways to get rich.</string>
+    <string name="waluigi_description">Warios brother, known for his envy of Luigi and his mischief.</string>
+    <string name="daisy_description">The princess of Sarasaland and Peachs friend, brave and outgoing.</string>
+    <string name="koopa_troopa_description">A common enemy in the Mushroom Kingdom, with a shell that can be used as a weapon when hit.</string>
+    <string name="goomba_description">A classic Mario enemy, small but persistent in blocking his path.</string>
+    <string name="bowser_jr_description">Bowsers son, with a strong desire to impress his father and follow in his footsteps.</string>
+    <string name="rosalina_description">Guardian of the cosmos and Marios friend, she accompanies the Lumas on their space adventures.</string>
+    <string name="lakitu_description">A Koopa who flies on a cloud and throws spines at Mario, sometimes helping as a cameraman in Mario Kart.</string>
+
+    <string name="mario_skills">High jump, super strength</string>
+    <string name="luigi_skills">High jump, sliding</string>
+    <string name="peach_skills">Floating in the air, magic</string>
+    <string name="bowser_skills">Fire breath, great strength</string>
+    <string name="yoshi_skills">Long tongue, extended jump</string>
+    <string name="toad_skills">Speed, Mushroom Kingdom knowledge</string>
+    <string name="donkey_kong_skills">Brute strength, barrel throwing</string>
+    <string name="wario_skills">Super strength, endurance</string>
+    <string name="waluigi_skills">Trap skills, agility</string>
+    <string name="daisy_skills">Super jump, sports skills</string>
+    <string name="koopa_troopa_skills">Shell defense, spinning attack</string>
+    <string name="goomba_skills">Group attack, tenacity</string>
+    <string name="bowser_jr_skills">Magic painting, battle skills</string>
+    <string name="rosalina_skills">Cosmic powers, levitation</string>
+    <string name="lakitu_skills">Cloud flying, throwing spines</string>
+
+</resources>

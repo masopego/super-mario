@@ -26,10 +26,7 @@ public class CharacterListFragment extends Fragment {
     private CharacterListFragmentBinding binding;
     private CharacterRepository repository;
     private SuperMarioRecyclerViewAdapter adapter;
-
-    public CharacterListFragment() {
-        repository = new InMemoryCharacterRepository();
-    }
+    
 
     @Nullable
     @Override
@@ -37,6 +34,11 @@ public class CharacterListFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         binding = CharacterListFragmentBinding.inflate(inflater, container, false);
+
+        if (getContext() != null) {
+            repository = new InMemoryCharacterRepository(getContext());  // Pasa el contexto correctamente
+        }
+
         return binding.getRoot();
     }
 
@@ -63,5 +65,6 @@ public class CharacterListFragment extends Fragment {
             ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.character_list);
         }
     }
+
 
 }

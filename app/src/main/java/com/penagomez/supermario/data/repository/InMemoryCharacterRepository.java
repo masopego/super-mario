@@ -1,5 +1,7 @@
 package com.penagomez.supermario.data.repository;
 
+import android.content.Context;
+
 import com.penagomez.supermario.R;
 import com.penagomez.supermario.data.dto.Character;
 
@@ -9,53 +11,131 @@ import java.util.List;
 public class InMemoryCharacterRepository implements CharacterRepository {
 
     private List<Character> characters = new ArrayList<Character>();
+    private Context context;
 
-    public InMemoryCharacterRepository() {
+    public InMemoryCharacterRepository(Context context) {
+
+        this.context = context;
 
         characters.add(
-                new Character(R.drawable.mario, "Super Mario", "El héroe principal, famoso por su valentía, habilidades de salto y rescatar a la Princesa Peach.", "Salto alto, super fuerza")
+                new Character(
+                        R.drawable.mario,
+                        context.getString(R.string.mario_name),
+                        context.getString(R.string.mario_description),
+                        context.getString(R.string.mario_skills)
+                )
         );
         characters.add(
-                new Character(R.drawable.luigi, "Luigi", "Hermano de Mario, ligeramente más alto y conocido por su carácter tímido pero valiente.", "Salto alto, deslizamiento")
+                new Character(
+                        R.drawable.luigi,
+                        context.getString(R.string.luigi_name),
+                        context.getString(R.string.luigi_description),
+                        context.getString(R.string.luigi_skills)
+                )
         );
         characters.add(
-                new Character(R.drawable.peach, "Princess Peach", "La princesa del Reino Champiñón, secuestrada frecuentemente por Bowser, pero siempre rescatada por Mario.", "Flotación en el aire, magia")
+                new Character(
+                        R.drawable.peach,
+                        context.getString(R.string.peach_name),
+                        context.getString(R.string.peach_description),
+                        context.getString(R.string.peach_skills)
+                )
         );
         characters.add(
-                new Character(R.drawable.bowser, "Bowser", "El rey de los Koopas, villano principal que intenta apoderarse del Reino Champiñón y secuestra a Peach.", "Aliento de fuego, gran fuerza")
+                new Character(
+                        R.drawable.bowser,
+                        context.getString(R.string.bowser_name),
+                        context.getString(R.string.bowser_description),
+                        context.getString(R.string.bowser_skills)
+                )
         );
         characters.add(
-                new Character(R.drawable.yoshi, "Yoshi", "Un fiel dinosaurio que ayuda a Mario y Luigi en sus aventuras, conocido por su habilidad para tragarse enemigos.", "Lengua larga, salto extendido")
+                new Character(
+                        R.drawable.yoshi,
+                        context.getString(R.string.yoshi_name),
+                        context.getString(R.string.yoshi_description),
+                        context.getString(R.string.yoshi_skills)
+                )
         );
         characters.add(
-                new Character(R.drawable.toad, "Toad", "Habitante y guardián del Reino Champiñón que asiste a Mario y Peach.", "Velocidad, conocimiento del Reino Champiñón")
+                new Character(
+                        R.drawable.toad,
+                        context.getString(R.string.toad_name),
+                        context.getString(R.string.toad_description),
+                        context.getString(R.string.toad_skills)
+                )
         );
         characters.add(
-                new Character(R.drawable.donkey_kong, "Donkey Kong", "Un gorila grande y fuerte que fue inicialmente un rival de Mario, pero ahora es un aliado ocasional.", "Fuerza bruta, lanzamiento de barriles")
+                new Character(
+                        R.drawable.donkey_kong,
+                        context.getString(R.string.donkey_kong_name),
+                        context.getString(R.string.donkey_kong_description),
+                        context.getString(R.string.donkey_kong_skills)
+                )
         );
         characters.add(
-                new Character(R.drawable.wario, "Wario", "El rival de Mario, egoísta y ambicioso, siempre buscando maneras de enriquecerse.", "Super fuerza, resistencia")
+                new Character(
+                        R.drawable.wario,
+                        context.getString(R.string.wario_name),
+                        context.getString(R.string.wario_description),
+                        context.getString(R.string.wario_skills)
+                )
         );
         characters.add(
-                new Character(R.drawable.waluigi, "Waluigi", "El hermano de Wario, conocido por su envidia hacia Luigi y sus travesuras.", "Habilidades de trampas, agilidad")
+                new Character(
+                        R.drawable.waluigi,
+                        context.getString(R.string.waluigi_name),
+                        context.getString(R.string.waluigi_description),
+                        context.getString(R.string.waluigi_skills)
+                )
         );
         characters.add(
-                new Character(R.drawable.daisy, "Princess Daisy", "La princesa del Reino Sarasaland y amiga de Peach, valiente y extrovertida.", "Super salto, habilidades deportivas")
+                new Character(
+                        R.drawable.daisy,
+                        context.getString(R.string.daisy_name),
+                        context.getString(R.string.daisy_description),
+                        context.getString(R.string.daisy_skills)
+                )
         );
         characters.add(
-                new Character(R.drawable.koopa_troopa, "Koopa Troopa", "Un enemigo común en el Reino Champiñón, que tiene un caparazón que puede usarse como arma cuando es golpeado.", "Defensa con caparazón, ataque giratorio")
+                new Character(
+                        R.drawable.koopa_troopa,
+                        context.getString(R.string.koopa_troopa_name),
+                        context.getString(R.string.koopa_troopa_description),
+                        context.getString(R.string.koopa_troopa_skills)
+                )
         );
         characters.add(
-                new Character(R.drawable.goomba, "Goomba", "Un enemigo clásico de Mario, pequeño pero persistente en bloquear su camino.", "Ataque en grupo, tenacidad")
+                new Character(
+                        R.drawable.goomba,
+                        context.getString(R.string.goomba_name),
+                        context.getString(R.string.goomba_description),
+                        context.getString(R.string.goomba_skills)
+                )
         );
         characters.add(
-                new Character(R.drawable.bowserjr, "Bowser Jr.", "Hijo de Bowser, con un fuerte deseo de impresionar a su padre y seguir sus pasos.", "Pintura mágica, habilidades en batalla")
+                new Character(
+                        R.drawable.bowserjr,
+                        context.getString(R.string.bowser_jr_name),
+                        context.getString(R.string.bowser_jr_description),
+                        context.getString(R.string.bowser_jr_skills)
+                )
         );
         characters.add(
-                new Character(R.drawable.rosalina, "Rosalina", "Guardiana del cosmos y amiga de Mario, acompaña a los Lumas en sus aventuras espaciales.", "Poderes cósmicos, levitación")
+                new Character(
+                        R.drawable.rosalina,
+                        context.getString(R.string.rosalina_name),
+                        context.getString(R.string.rosalina_description),
+                        context.getString(R.string.rosalina_skills)
+                )
         );
         characters.add(
-                new Character(R.drawable.lakitu, "Lakitu", "Un Koopa que vuela en una nube y arroja espinas a Mario, a veces ayuda como camarógrafo en Mario Kart.", "Volar en nubes, lanzar espinas")
+                new Character(
+                        R.drawable.lakitu,
+                        context.getString(R.string.lakitu_name),
+                        context.getString(R.string.lakitu_description),
+                        context.getString(R.string.lakitu_skills)
+                )
         );
     }
 

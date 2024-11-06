@@ -16,4 +16,8 @@
         android:id="@+id/characterDetailsFragment"
         android:name="com.penagomez.supermario.ui.characterdetails.CharacterDetailsFragment"
         android:label="CharacterDetailsFragment" />
+    <fragment
+        android:id="@+id/preferencesFragment"
+        android:name="com.penagomez.supermario.data.store.PreferencesFragment"
+        android:label="PreferencesFragment" />
 </navigation>
