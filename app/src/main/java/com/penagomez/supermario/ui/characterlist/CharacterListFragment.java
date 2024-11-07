@@ -88,6 +88,8 @@ public class CharacterListFragment extends Fragment {
 
         // Update the action bar title when fragment is visible
         if (getActivity() != null) {
+            // Show the action bar when this fragment starts
+            ((AppCompatActivity) getActivity()).getSupportActionBar().show();
             ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.character_list);
         }
     }

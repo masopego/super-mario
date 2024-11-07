@@ -2,7 +2,6 @@
     <string name="app_name">SuperMario</string>
     <string name="character_list">Lista de personajes</string>
     <string name="character_detail">Detalle</string>
-    <string name="preferences">Preferencias</string>
 
     <string name="ability">Habilidades</string>
     <string name="list_welcome_message">Bienvenidos al mundo de Mario</string>

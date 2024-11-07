@@ -67,13 +67,14 @@ public class PreferencesFragment extends PreferenceFragmentCompat {
     }
 
     /**
-     * Called when the fragment starts. Sets the title of the action bar to "Character Detail".
+     * Called when the fragment starts. Hide the action bar.
      */
     @Override
     public void onStart() {
         super.onStart();
         if (getActivity() != null) {
-            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.preferences);
+            // Hide the action bar when this fragment starts
+            ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
         }
     }
 }

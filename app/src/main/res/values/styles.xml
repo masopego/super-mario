@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Texts styles -->
+    <style name="Title">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/color_1</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Subtitle">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/color_2</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="CharacterName">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/color_3</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Description">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/color_5</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+    <style name="Tag">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/color_5</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+
+    <!-- Card View styles -->
+    <style name="CardViewStyle">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="android:shadowColor">@color/color_3</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_height">80dp</item>
+    </style>
+</resources>

@@ -2,8 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="mario_red">#E63946</color> <!-- Rojo -->
-    <color name="mario_dark_red">#D62839</color> <!-- Rojo oscuro -->
-    <color name="mario_yellow">#F1C40F</color> <!-- Amarillo -->
-    <color name="mario_blue">#4A90E2</color> <!-- Azul -->
+
+    <color name="color_1">#ef476f</color>      <!-- Rosado -->
+    <color name="color_2">#06d6a0</color>      <!-- Verde -->
+    <color name="color_3">#ffd166</color>      <!-- Amarillo -->
+    <color name="color_4">#118ab2</color>      <!-- Azul oscuro -->
+    <color name="color_5">#073b4c</color>      <!-- Azul muy oscuro -->
+    <color name="color_6">#edede9</color>      <!-- Gris claro -->
+    <color name="color_7">#d6ccc2</color>      <!-- Gris medio -->
+    <color name="color_8">#f5ebe0</color>      <!-- Beige claro -->
+    <color name="color_9">#e3d5ca</color>      <!-- Gris oscuro claro -->
+    <color name="color_10">#d5bdaf</color>     <!-- Gris oscuro -->
 </resources>

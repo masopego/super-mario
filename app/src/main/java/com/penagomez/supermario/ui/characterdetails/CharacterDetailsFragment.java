@@ -75,6 +75,8 @@ public class CharacterDetailsFragment extends Fragment {
     public void onStart() {
         super.onStart();
         if (getActivity() != null) {
+            // Show the action bar when this fragment starts
+            ((AppCompatActivity) getActivity()).getSupportActionBar().show();
             ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.character_detail);
         }
     }
