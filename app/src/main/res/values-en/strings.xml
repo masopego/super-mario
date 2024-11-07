@@ -6,6 +6,8 @@
     <string name="ability">Abilities</string>
     <string name="list_welcome_message">Welcome to the world of Mario</string>
     <string name="detail_welcome_message">The character has been selected</string>
+    <string name="preferences">Preferences</string>
+
 
     <string name="about_us">About us...</string>
     <string name="about_us_title">About</string>

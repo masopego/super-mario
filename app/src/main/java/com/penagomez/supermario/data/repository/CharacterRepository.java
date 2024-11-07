@@ -4,6 +4,16 @@ import com.penagomez.supermario.data.dto.Character;
 
 import java.util.List;
 
+/**
+ * Repository interface for accessing character data.
+ * Provides a method to retrieve a list of characters from a data source.
+ */
 public interface CharacterRepository {
-    public List<Character> findAll();
+
+    /**
+     * Retrieves all characters available in the data source.
+     *
+     * @return List of {@link Character} objects.
+     */
+    List<Character> findAll();
 }

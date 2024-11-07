@@ -8,15 +8,29 @@ import com.penagomez.supermario.data.dto.Character;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * InMemoryCharacterRepository is an implementation of the CharacterRepository interface.
+ * This repository is used to provide a list of characters stored in memory.
+ * It populates the list of characters using hardcoded values (images and character details)
+ * and retrieves the list when requested.
+ */
 public class InMemoryCharacterRepository implements CharacterRepository {
 
-    private List<Character> characters = new ArrayList<Character>();
+    // List of characters stored in memory
+    private List<Character> characters = new ArrayList<>();
     private Context context;
 
+    /**
+     * Constructor to initialize the repository with context.
+     * The context is used to fetch string resources for character details.
+     *
+     * @param context The application context, used to fetch strings and resources.
+     */
     public InMemoryCharacterRepository(Context context) {
 
         this.context = context;
 
+        // Adds hardcoded character details to the list
         characters.add(
                 new Character(
                         R.drawable.mario,
@@ -139,6 +153,11 @@ public class InMemoryCharacterRepository implements CharacterRepository {
         );
     }
 
+    /**
+     * Retrieves the list of all characters in the repository.
+     *
+     * @return A list of {@link Character} objects.
+     */
     @Override
     public List<Character> findAll() {
         return characters;

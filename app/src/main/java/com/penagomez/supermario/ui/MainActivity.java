@@ -1,20 +1,14 @@
 package com.penagomez.supermario.ui;
 
-import android.content.DialogInterface;
+
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
@@ -23,11 +17,26 @@ import com.google.android.material.navigation.NavigationView;
 import com.penagomez.supermario.R;
 import com.penagomez.supermario.data.dto.Character;
 import com.penagomez.supermario.databinding.ActivityMainBinding;
+import com.penagomez.supermario.ui.handler.DrawerHandler;
+import com.penagomez.supermario.ui.handler.MenuHandler;
+import com.penagomez.supermario.ui.handler.NavigationHandler;
 
+/**
+ * MainActivity serves as the main entry point of the application, initializing UI components
+ * and coordinating user interactions.
+ * <p>
+ * Responsibilities are delegated to handlers for better readability:
+ * - NavigationHandler manages fragment navigation.
+ * - MenuHandler manages the options menu and the "About" dialog.
+ * - DrawerHandler manages the drawer layout and navigation within it.
+ */
 public class MainActivity extends AppCompatActivity {
+
     private ActivityMainBinding binding;
     private NavController navController;
-    private DrawerLayout drawerLayout;
+    private DrawerHandler drawerHandler;
+    private MenuHandler menuHandler;
+    private NavigationHandler navigationHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,98 +47,42 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
-        // Configura el NavController
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-
         NavigationUI.setupActionBarWithNavController(this, navController);
 
+        drawerHandler = new DrawerHandler(binding.drawerLayout, navController);
+        menuHandler = new MenuHandler(this);
+        navigationHandler = new NavigationHandler(navController);
 
-        // Configura el DrawerLayout y NavigationView
-        drawerLayout = binding.drawerLayout;
         NavigationView navigationView = findViewById(R.id.nav_view);
-        NavigationUI.setupWithNavController(navigationView, navController);
-        navigationView.setNavigationItemSelectedListener(this::onNavigationItemSelected);
-
+        drawerHandler.setupDrawer(navigationView);
     }
 
-
+    /**
+     * Called when a character is clicked in the list, triggering navigation to the character detail screen.
+     *
+     * @param character The selected character.
+     * @param view      The view associated with the click event.
+     */
     public void characterClicked(Character character, View view) {
-        Bundle bundle = new Bundle();
-
-        bundle.putInt("image", character.getImage());
-        bundle.putString("name", character.getName());
-        bundle.putString("description", character.getDescription());
-        bundle.putString("abilities", character.getAbilities());
-
-        // Navegar al CharacterDetailFragment con el Bundle
-        Navigation.findNavController(view).navigate(R.id.characterDetailsFragment, bundle);
-
+        navigationHandler.navigateToCharacterDetails(character, view);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-
+        menuHandler.onCreateOptionsMenu(menu, getMenuInflater());
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_about_us) {
-            showAboutDialog();
-            return true;
-        }
-        if (item.getItemId() == R.id.action_menu) {
-
-            if (drawerLayout.isDrawerOpen(GravityCompat.END)) {
-                drawerLayout.closeDrawer(GravityCompat.END);
-            } else {
-                drawerLayout.openDrawer(GravityCompat.END);
-            }
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+        return menuHandler.onOptionsItemSelected(item,
+                menuHandler::showAboutDialog,
+                drawerHandler::toggleDrawer) || super.onOptionsItemSelected(item);
     }
-
 
     @Override
     public boolean onSupportNavigateUp() {
-        Fragment navHostFragment = getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
-
-        if (navHostFragment != null) {
-            return NavigationUI.navigateUp(navController, binding.drawerLayout);
-        }
-        return super.onSupportNavigateUp();
+        return NavigationUI.navigateUp(navController, binding.drawerLayout) || super.onSupportNavigateUp();
     }
-
-    private void showAboutDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setIcon(R.mipmap.ic_launcher) // Usa el icono de la app
-                .setTitle(getString(R.string.about_us_title))
-                .setMessage(getString(R.string.about_us_message))
-                .setPositiveButton(getString(R.string.about_us_button), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-        builder.create().show();
-    }
-
-
-    private boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int itemId = item.getItemId();
-        if (itemId == R.id.nav_home) {
-            navController.navigate(R.id.characterListFragment);
-        } else if (itemId == R.id.nav_settings) {
-            navController.navigate(R.id.preferencesFragment);
-        } else {
-            throw new IllegalStateException("Unexpected value: " + itemId);
-        }
-        drawerLayout.closeDrawer(GravityCompat.END);
-        return true;
-    }
-
 }
