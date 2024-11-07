@@ -1,4 +1,4 @@
-package com.penagomez.supermario.data.store;
+package com.penagomez.supermario.ui.preferences;
 
 import android.content.res.Configuration;
 import android.content.res.Resources;

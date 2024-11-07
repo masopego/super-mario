@@ -18,6 +18,6 @@
         android:label="CharacterDetailsFragment" />
     <fragment
         android:id="@+id/preferencesFragment"
-        android:name="com.penagomez.supermario.data.store.PreferencesFragment"
+        android:name="com.penagomez.supermario.ui.preferences.PreferencesFragment"
         android:label="PreferencesFragment" />
 </navigation>

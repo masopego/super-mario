@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SuperMario</string>
     <string name="character_list">Character List</string>
-    <string name="character_detail">Character Details</string>
+    <string name="character_detail">Details</string>
 
     <string name="ability">Abilities</string>
     <string name="list_welcome_message">Welcome to the world of Mario</string>
